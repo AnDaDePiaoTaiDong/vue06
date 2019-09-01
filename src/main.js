@@ -5,11 +5,18 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 
+import Resource from 'vue-resource'
+Vue.use(Resource);
+
+import axios from 'axios'
+Vue.prototype.$axios = axios;
+
 import ElementUI from 'element-ui' //element-ui的全部组件
 import 'element-ui/lib/theme-chalk/index.css'//element-ui的css
 Vue.use(ElementUI); //使用elementUI
 
 Vue.config.productionTip = false;
+window.bus=new Vue ();
 
 /* eslint-disable no-new app*/
 new Vue({

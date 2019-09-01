@@ -36,7 +36,7 @@
         },
         methods: {
             handleSelect(key, keyPath) {
-                console.log(key, keyPath);
+                bus.$emit("sendData",{data:"需要发送的数据"});
             }
         }
     }

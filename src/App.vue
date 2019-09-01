@@ -3,18 +3,20 @@
 <template>
   <div id="app">
     <img src="./assets/logo.png">
-    <router-link to="/hello">我是1</router-link>
-    <router-link to="/menu">我是2</router-link>
+    <Notify></Notify>
+    <router-link to="/hello">查看表单</router-link>
+    <router-link to="/menu">查看菜单</router-link>
+    <router-link to="/music">去听music</router-link>
+    <!-- 路由-->
     <router-view/>
 
-    <Form></Form>
   </div>
 </template>
 
 <script>
-    import Form from './components/Form.vue'
+    import Notify from "./components/Notify";
     export default {
-        comments: {Form},
+        components: {Notify},
         name: 'App'
     }
 </script>
